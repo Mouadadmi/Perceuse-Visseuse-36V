@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مثقاب ومفك لاسلكي 36VF MAX الأصلي | 300 درهم فقط - الدفع عند الاستلام</title>
+  <meta name="description" content="طقم مثقاب ومفك لاسلكي 36VF MAX مع بطاريتين ليثيوم وحقيبة متكاملة بسعر 300 درهم فقط. توصيل مجاني والدفع عند الاستلام في جميع مدن المغرب." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Cairo', 'Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  </style>
+</head>
+<body class="bg-stone-50 text-stone-900 antialiased selection:bg-emerald-500 selection:text-white pb-20 sm:pb-0">
+
+  <!-- Header / Navbar -->
+  <header class="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <div class="w-10 h-10 rounded-xl bg-amber-500 flex items-center justify-center text-stone-950 font-black shadow-md">
+          <i data-lucide="wrench" class="w-5 h-5 text-stone-950"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <span class="font-black text-stone-950 text-base sm:text-lg tracking-tight">36VF MAX</span>
+            <span class="bg-emerald-600 text-white text-[10px] font-extrabold px-1.5 py-0.5 rounded-sm">الأصلي 100%</span>
+          </div>
+          <span class="text-[11px] text-stone-500 font-medium block">توصيل مجاني لكافة المدن المغربية 🇲🇦</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Orders Drawer Trigger -->
+        <button onclick="toggleOrdersDrawer()" class="flex items-center gap-1.5 text-xs font-bold text-stone-700 hover:text-emerald-700 bg-stone-100 hover:bg-emerald-50 px-3 py-2 rounded-xl transition cursor-pointer border border-stone-200">
+          <i data-lucide="shopping-bag" class="w-3.5 h-3.5 text-emerald-600"></i>
+          <span class="hidden sm:inline">الطلبيات</span>
+          <span id="ordersCountBadge" class="bg-emerald-600 text-white text-[10px] font-black px-1.5 py-0.2 rounded-full min-w-4 text-center">0</span>
+        </button>
+
+        <a href="https://wa.me/212617641774" target="_blank" class="hidden sm:flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-3 py-2 rounded-xl transition shadow-xs">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+          <span>0617641774</span>
+        </a>
+
+        <button onclick="scrollToOrder()" class="bg-amber-500 hover:bg-amber-600 text-stone-950 font-extrabold text-xs px-3.5 py-2 rounded-xl transition shadow-xs cursor-pointer">
+          اطلب الآن
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-10">
+
+    <!-- Flash Offer Notice & Countdown -->
+    <div class="mb-6 bg-gradient-to-r from-amber-500 via-rose-500 to-amber-600 p-3 sm:p-3.5 rounded-2xl text-white shadow-lg flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-start">
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0 animate-bounce">
+          <i data-lucide="flame" class="w-5 h-5 text-amber-200"></i>
+        </div>
+        <div>
+          <span class="text-xs sm:text-sm font-black block">
+            ⚡ تخفيض استثنائي 33% لفترة محدودة | السعر الحالي 300 درهم فقط
+          </span>
+          <span class="text-[11px] text-amber-100 block">
+            المخزون المتوفر سينفذ قريباً (بقي 7 حقائب فقط بهذا السعر)
+          </span>
+        </div>
+      </div>
+
+      <!-- Countdown Clock -->
+      <div class="flex items-center gap-1.5 font-mono text-xs font-bold bg-black/30 px-3 py-1.5 rounded-xl backdrop-blur-sm">
+        <i data-lucide="clock" class="w-3.5 h-3.5 text-amber-300"></i>
+        <span id="timerHours">05</span>:
+        <span id="timerMinutes">42</span>:
+        <span id="timerSeconds">18</span>
+      </div>
+    </div>
+
+    <!-- Product Hero Section -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+      <!-- Gallery Column -->
+      <div class="lg:col-span-6 lg:sticky lg:top-24">
+        <div class="bg-white rounded-3xl p-3 border border-stone-200 shadow-sm">
+          <div class="relative w-full aspect-square bg-stone-900 rounded-2xl overflow-hidden flex items-center justify-center">
+            <img id="mainProductImage" src="product_36vf.jpg" alt="طقم مثقاب 36VF MAX" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1504148455328-c376907d081c?w=900&auto=format&fit=crop&q=80'" />
+            <div class="absolute top-3 right-3 bg-amber-500 text-stone-950 font-black text-xs px-2.5 py-1 rounded-lg shadow-md flex items-center gap-1">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+              <span>طقم متكامل 24+ قطعة</span>
+            </div>
+            <div class="absolute bottom-3 left-3 bg-black/70 backdrop-blur-sm text-white text-[11px] font-bold px-2.5 py-1 rounded-lg">
+              2 بطاريات ليثيوم 36VF
+            </div>
+          </div>
+
+          <!-- Guarantees under photo -->
+          <div class="mt-3 grid grid-cols-3 gap-2 bg-stone-50 p-2.5 rounded-xl text-center text-xs border border-stone-100">
+            <div class="flex flex-col items-center">
+              <i data-lucide="truck" class="w-4 h-4 text-emerald-600 mb-1"></i>
+              <span class="font-bold text-stone-800">توصيل مجاني</span>
+              <span class="text-[10px] text-stone-500">24h - 48h</span>
+            </div>
+            <div class="flex flex-col items-center border-x border-stone-200">
+              <i data-lucide="shield-check" class="w-4 h-4 text-sky-600 mb-1"></i>
+              <span class="font-bold text-stone-800">عاين قبل الدفع</span>
+              <span class="text-[10px] text-stone-500">100% مضمون</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <i data-lucide="rotate-ccw" class="w-4 h-4 text-amber-600 mb-1"></i>
+              <span class="font-bold text-stone-800">ضمان سنة</span>
+              <span class="text-[10px] text-stone-500">استبدال فوري</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info & Buy More Promotion Column -->
+      <div class="lg:col-span-6 flex flex-col gap-4">
+
+        <!-- Rating -->
+        <div class="flex items-center gap-2">
+          <div class="flex items-center gap-0.5 text-amber-400">
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          </div>
+          <span class="text-xs font-black text-stone-800">4.9 / 5</span>
+          <span class="text-xs text-stone-500">(أكثر من 1,480 تقييم من زبناء مغاربة)</span>
+        </div>
+
+        <!-- Title -->
+        <div>
+          <h1 class="text-2xl sm:text-3xl lg:text-4xl font-black text-stone-900 leading-tight">
+            طقم مفك ومثقاب لاسلكي صدمي 36VF MAX الأصلي
+          </h1>
+          <p class="text-xs sm:text-sm text-sky-800 font-bold mt-1">
+            مع بطاريتين ليثيوم 36VF + شاحن سريع + حقيبة متكاملة بأكثر من 24 قطعة
+          </p>
+        </div>
+
+        <!-- Price Block -->
+        <div class="bg-stone-100 p-4 rounded-2xl border border-stone-200 flex items-baseline justify-between gap-4">
+          <div>
+            <span class="text-xs text-stone-500 block">السعر الحالي المخفض للحقيبة:</span>
+            <div class="flex items-baseline gap-2">
+              <span id="heroPriceDisplay" class="text-3xl sm:text-4xl font-black text-sky-700">300</span>
+              <span class="text-base font-bold text-stone-800">DH (درهم)</span>
+              <span class="text-sm text-stone-400 line-through font-bold">450 DH</span>
+            </div>
+          </div>
+          <div class="text-end">
+            <span class="inline-block bg-rose-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-xs">
+              وفر 150 درهم (-33%)
+            </span>
+            <span class="text-[10px] text-emerald-700 font-bold block mt-1">
+              ✓ التوصيل مجاني 0 درهم
+            </span>
+          </div>
+        </div>
+
+        <!-- Features Bullets -->
+        <div class="space-y-2 py-1 text-xs sm:text-sm text-stone-700">
+          <div class="flex items-center gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+            <span><strong>بطاريتين ليثيوم 36VF أيون:</strong> للعمل لساعات طويلة دون توقف أو انقطاع</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+            <span><strong>خاصية الحفر الصدمي (Impact):</strong> قوة كافية لثقب الخرسانة والإسمنت، الأخشاب، والحديد</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+            <span><strong>21 مستوى لعزم الدوران + سرعتين:</strong> تحكم دقيق وسلس في تثبيت وفك مختلف أنواع البراغي</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+            <span><strong>إكسسوارات كاملة مع أنبوب مرن:</strong> للوصول لأضيق الزوايا تحت السيارات والأثاث</span>
+          </div>
+        </div>
+
+        <!-- Quantity Packages Promotion -->
+        <div class="bg-white rounded-3xl p-4 sm:p-5 border-2 border-amber-500/80 shadow-md">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2">
+              <span class="w-7 h-7 rounded-lg bg-amber-500 text-stone-950 flex items-center justify-center font-bold text-xs">
+                %
+              </span>
+              <h3 class="font-black text-stone-900 text-sm sm:text-base">
+                عروض التخفيض عند طلب أكثر من حقيبة
+              </h3>
+            </div>
+            <span class="text-[11px] bg-emerald-100 text-emerald-800 font-bold px-2.5 py-0.5 rounded-full">
+              توفير إضافي
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 gap-2.5">
+            <!-- Package 1 -->
+            <div id="pkg-card-1" onclick="selectPackage(1, 300, 0, 'حقيبة واحدة')" class="pkg-card relative border-2 border-emerald-600 bg-emerald-50/40 rounded-2xl p-3.5 cursor-pointer transition flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <input type="radio" name="package" id="radio-pkg-1" checked class="accent-emerald-600 w-4 h-4" />
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="font-extrabold text-sm text-stone-900">1 حقيبة متكاملة</span>
+                    <span class="text-xs text-stone-500">(الاستعمال الفردي)</span>
+                  </div>
+                  <span class="text-[11px] text-stone-500 block">شاملة بطاريتين + الشاحن + 24 قطعة</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <span class="text-base font-black text-emerald-700">300 DH</span>
+                <span class="text-[10px] text-stone-400 block line-through">450 DH</span>
+              </div>
+            </div>
+
+            <!-- Package 2 -->
+            <div id="pkg-card-2" onclick="selectPackage(2, 550, 50, 'حقيبتان (2)')" class="pkg-card relative border-2 border-stone-200 hover:border-amber-400 rounded-2xl p-3.5 cursor-pointer transition flex items-center justify-between">
+              <div class="absolute -top-2.5 left-4 bg-amber-500 text-stone-950 text-[10px] font-black px-2 py-0.5 rounded-full shadow-xs">
+                الأكثر طلباً (وفر 50 درهم إضافية)
+              </div>
+              <div class="flex items-center gap-3">
+                <input type="radio" name="package" id="radio-pkg-2" class="accent-emerald-600 w-4 h-4" />
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="font-extrabold text-sm text-stone-900">حقيبتان (2 طقم كامل)</span>
+                  </div>
+                  <span class="text-[11px] text-stone-500 block">275 درهم فقط للحقيبة الواحدة</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <span class="text-base font-black text-emerald-700">550 DH</span>
+                <span class="text-[10px] text-stone-400 block line-through">900 DH</span>
+              </div>
+            </div>
+
+            <!-- Package 3 -->
+            <div id="pkg-card-3" onclick="selectPackage(3, 750, 150, '3 حقائب (عرض الورشات)')" class="pkg-card relative border-2 border-stone-200 hover:border-amber-400 rounded-2xl p-3.5 cursor-pointer transition flex items-center justify-between">
+              <div class="absolute -top-2.5 left-4 bg-emerald-600 text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow-xs">
+                أكبر توفير (وفر 150 درهم)
+              </div>
+              <div class="flex items-center gap-3">
+                <input type="radio" name="package" id="radio-pkg-3" class="accent-emerald-600 w-4 h-4" />
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="font-extrabold text-sm text-stone-900">3 حقائب متكاملة</span>
+                  </div>
+                  <span class="text-[11px] text-stone-500 block">250 درهم فقط للحقيبة الواحدة</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <span class="text-base font-black text-emerald-700">750 DH</span>
+                <span class="text-[10px] text-stone-400 block line-through">1350 DH</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Buttons Block -->
+        <div class="space-y-2.5 pt-1">
+          <button onclick="scrollToOrder()" class="w-full bg-gradient-to-r from-emerald-600 via-emerald-700 to-teal-800 hover:from-emerald-700 hover:to-teal-900 text-white font-black text-base sm:text-lg py-4 px-6 rounded-2xl shadow-xl transition transform active:scale-[0.99] flex items-center justify-center gap-2.5 cursor-pointer">
+            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+            <span id="btnCtaText">اطلب الآن | الدفع عند الاستلام (300 DH)</span>
+          </button>
+
+          <a id="btnDirectWhatsAppHero" href="https://wa.me/212617641774?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%B7%D9%82%D9%85%20%D8%A7%D9%84%D9%85%D8%AB%D9%82%D8%A7%D8%A8%2036VF%20MAX%20%D8%A8%D8%B3%D8%B9%D8%B1%20300%20%D8%AF%D8%B1%D9%87%D9%85." target="_blank" class="w-full bg-stone-900 hover:bg-stone-950 text-white font-bold text-xs sm:text-sm py-3.5 px-4 rounded-xl shadow-md transition flex items-center justify-center gap-2 border border-stone-700">
+            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>طلب فوري عبر الواتساب (0617641774)</span>
+          </a>
+        </div>
+
+        <!-- Cash on Delivery Guarantee -->
+        <div class="bg-emerald-50 border border-emerald-200/80 rounded-2xl p-3 flex items-center justify-between text-xs text-emerald-950">
+          <div class="flex items-center gap-2">
+            <i data-lucide="banknote" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+            <span>الدفع عند الاستلام فقط (COD) | لا تدفع درهماً واحداً حتى تفحص وتجرب سلعتك</span>
+          </div>
+          <span id="badgePrice" class="font-bold text-emerald-800">300 DH</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Technical Specs & Features Grid -->
+    <section class="my-14 bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm">
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <h2 class="text-xl sm:text-2xl font-black text-stone-900">مميزات مثقاب 36VF MAX الاحترافي</h2>
+        <p class="text-xs sm:text-sm text-stone-500 mt-1">مصمم لتلبية جميع أعمال الحفر الصعبة والفك والتركيب المنزلي والمهني</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="p-4 rounded-2xl bg-stone-50 border border-stone-100">
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-3">
+            <i data-lucide="battery-charging" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-extrabold text-sm text-stone-900">2 بطاريات ليثيوم 36VF</h4>
+          <p class="text-xs text-stone-600 mt-1">بطاريات قوية تدوم طويلاً مع شاحن ذكي سريع للحماية من فرط الشحن وسخونة المحرك.</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-stone-50 border border-stone-100">
+          <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center mb-3">
+            <i data-lucide="hammer" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-extrabold text-sm text-stone-900">حفر صدمي (Impact)</h4>
+          <p class="text-xs text-stone-600 mt-1">نظام الدق الرأسي لثقب جدران الإسمنت والخرسانة والآجر والخشب والحديد دون عناء.</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-stone-50 border border-stone-100">
+          <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center mb-3">
+            <i data-lucide="gauge" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-extrabold text-sm text-stone-900">21 درجة عزم + سرعتين</h4>
+          <p class="text-xs text-stone-600 mt-1">تحكم دقيق يمنع كسر رؤوس البراغي أو تلف المواد الحساسة كالخشب والبلاستيك والجبص.</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-stone-50 border border-stone-100">
+          <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center mb-3">
+            <i data-lucide="package-check" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-extrabold text-sm text-stone-900">علبة منظمة 24+ قطعة</h4>
+          <p class="text-xs text-stone-600 mt-1">تشمل ميكات الحفر، رؤوس مفكات بمقاسات مختلفة، سوار مرن للأماكن الضيقة ومفتاح عزم.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Checkout Order Form -->
+    <div id="order-form-section" class="my-10 max-w-3xl mx-auto scroll-mt-20">
+      <div class="bg-white rounded-3xl p-5 sm:p-7 border-2 border-stone-200 shadow-xl">
+
+        <div class="flex items-center justify-between border-b border-stone-200 pb-4 mb-5">
+          <div class="flex items-center gap-2.5">
+            <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold">
+              <i data-lucide="truck" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h2 class="font-black text-stone-900 text-lg sm:text-xl">استمارة الطلب السريع</h2>
+              <span class="text-xs text-stone-500">التوصيل مجاني 0 درهم والدفع عند الاستلام</span>
+            </div>
+          </div>
+          <div class="text-end">
+            <span class="text-[11px] text-stone-400 block">المبلغ الصافي:</span>
+            <span id="formSummaryPrice" class="text-lg sm:text-xl font-black text-emerald-700">300 DH</span>
+          </div>
+        </div>
+
+        <!-- Success notification if order submitted -->
+        <div id="orderSuccessAlert" class="hidden mb-6 p-4 rounded-2xl bg-emerald-500/15 border-2 border-emerald-500 text-emerald-950">
+          <div class="flex items-start gap-3">
+            <div class="w-9 h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0">
+              <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+            </div>
+            <div class="flex-1">
+              <h4 class="font-black text-emerald-900 text-sm sm:text-base">✓ تم تسجيل طلبيتك بنجاح!</h4>
+              <p id="orderSuccessMessage" class="text-xs text-emerald-800 mt-1"></p>
+              <div class="mt-2.5 flex items-center gap-2">
+                <a id="orderSuccessWhatsAppLink" href="#" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-3 py-1.5 rounded-lg inline-flex items-center gap-1.5 shadow-xs">
+                  <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                  <span>تأكيد عبر الواتساب فوراً</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COD Banner -->
+        <div class="p-4 rounded-2xl border-2 border-emerald-500 bg-emerald-50/70 text-emerald-950 shadow-xs mb-5 flex items-start gap-3">
+          <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0">
+            <i data-lucide="banknote" class="w-5 h-5"></i>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center justify-between">
+              <h4 class="font-black text-xs sm:text-sm text-emerald-950">الدفع نقداً عند الاستلام فقط (COD)</h4>
+              <button type="button" onclick="fillTestDemo()" class="text-[11px] text-sky-700 hover:text-sky-800 underline font-bold cursor-pointer">ملء سريع للتجريب</button>
+            </div>
+            <p class="text-[11px] text-emerald-900/90 mt-1 leading-relaxed">
+              لا تحتاج لإدخال أي بطاقة بنكية. حتى يصلك الموزع إلى باب منزلك أو عملك، افتح العلبة وعاين طقم المثقاب وتأكد من جودته، ثم سلّم المبلغ للموزع.
+            </p>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <form id="orderForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+            <!-- Name -->
+            <div>
+              <label class="block text-xs font-bold text-stone-700 mb-1">الاسم الكامل (الاسم والنسب) *</label>
+              <input id="customerName" type="text" placeholder="مثال: محمد العلوي" class="w-full text-sm px-3.5 py-2.5 rounded-xl border border-stone-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-white" />
+              <p id="nameError" class="hidden text-[11px] text-rose-600 font-bold mt-1">يرجى كتابة الاسم والنسب</p>
+            </div>
+
+            <!-- Phone -->
+            <div>
+              <label class="block text-xs font-bold text-stone-700 mb-1">رقم الهاتف للتواصل وتأكيد التوصيل *</label>
+              <input id="customerPhone" type="tel" dir="ltr" placeholder="06 12 34 56 78" class="w-full text-sm px-3.5 py-2.5 rounded-xl border border-stone-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-white text-left font-mono" />
+              <p id="phoneError" class="hidden text-[11px] text-rose-600 font-bold mt-1">يرجى إدخال رقم هاتف صحيح للتواصل</p>
+            </div>
+
+            <!-- City -->
+            <div>
+              <label class="block text-xs font-bold text-stone-700 mb-1">المدينة *</label>
+              <select id="customerCity" class="w-full text-sm px-3.5 py-2.5 rounded-xl border border-stone-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-white">
+                <option value="الدار البيضاء (Casablanca)">الدار البيضاء (Casablanca)</option>
+                <option value="الرباط (Rabat)">الرباط (Rabat)</option>
+                <option value="سلا (Salé)">سلا (Salé)</option>
+                <option value="مراكش (Marrakech)">مراكش (Marrakech)</option>
+                <option value="فاس (Fès)">فاس (Fès)</option>
+                <option value="طنجة (Tanger)">طنجة (Tanger)</option>
+                <option value="أكادير (Agadir)">أكادير (Agadir)</option>
+                <option value="مكناس (Meknès)">مكناس (Meknès)</option>
+                <option value="وجدة (Oujda)">وجدة (Oujda)</option>
+                <option value="القنيطرة (Kénitra)">القنيطرة (Kénitra)</option>
+                <option value="تطوان (Tétouan)">تطوان (Tétouan)</option>
+                <option value="تمارة (Témara)">تمارة (Témara)</option>
+                <option value="آسفي (Safi)">آسفي (Safi)</option>
+                <option value="المحمدية (Mohammedia)">المحمدية (Mohammedia)</option>
+                <option value="الجديدة (El Jadida)">الجديدة (El Jadida)</option>
+                <option value="بني ملال (Béni Mellal)">بني ملال (Béni Mellal)</option>
+                <option value="الناظور (Nador)">الناظور (Nador)</option>
+                <option value="تازة (Taza)">تازة (Taza)</option>
+                <option value="خريبكة (Khouribga)">خريبكة (Khouribga)</option>
+                <option value="العيون (Laâyoune)">العيون (Laâyoune)</option>
+                <option value="مدينة أخرى (Autre ville)">مدينة أخرى (Autre ville)</option>
+              </select>
+            </div>
+
+            <!-- Address -->
+            <div>
+              <label class="block text-xs font-bold text-stone-700 mb-1">عنوان التوصيل (الحي أو الشارع) *</label>
+              <input id="customerAddress" type="text" placeholder="مثال: حي السلام، عمارة 4 شقة 12" class="w-full text-sm px-3.5 py-2.5 rounded-xl border border-stone-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-white" />
+              <p id="addressError" class="hidden text-[11px] text-rose-600 font-bold mt-1">يرجى كتابة العنوان للتوصيل</p>
+            </div>
+          </div>
+
+          <!-- Notes -->
+          <div>
+            <label class="block text-xs font-bold text-stone-700 mb-1">ملاحظة إضافية للموزع (اختياري)</label>
+            <input id="customerNotes" type="text" placeholder="مثال: الاتصال بعد الظهر أو التوصيل لمقر العمل" class="w-full text-sm px-3.5 py-2 rounded-xl border border-stone-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-white" />
+          </div>
+
+          <!-- Total Pill -->
+          <div class="bg-stone-50 p-3.5 rounded-xl border border-stone-200 flex items-center justify-between text-xs sm:text-sm">
+            <span class="text-stone-600 font-bold">المجموع المستحق عند الاستلام:</span>
+            <span id="formSubmitTotal" class="text-lg font-black text-emerald-700">300 DH (توصيل مجاني 0 DH)</span>
+          </div>
+
+          <!-- Submit Buttons -->
+          <div class="space-y-2 pt-2">
+            <button type="submit" id="btnSubmitForm" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-black text-base sm:text-lg py-4 px-6 rounded-2xl shadow-xl transition flex items-center justify-center gap-2 cursor-pointer">
+              <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+              <span>تأكيد الطلب الآن | الدفع عند الاستلام</span>
+            </button>
+
+            <a id="btnFormDirectWhatsApp" href="https://wa.me/212617641774" target="_blank" class="w-full bg-stone-900 hover:bg-stone-950 text-white font-bold text-xs sm:text-sm py-3 px-4 rounded-xl shadow-md transition flex items-center justify-center gap-2 border border-stone-700">
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+              <span>أو اطلب مباشرة عبر الواتساب بنقرة واحدة (0617641774)</span>
+            </a>
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+    <!-- Customer Reviews Section -->
+    <section class="my-14">
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <h2 class="text-xl sm:text-2xl font-black text-stone-900">آراء وتجارب الزبناء المغاربة</h2>
+        <p class="text-xs sm:text-sm text-stone-500 mt-1">أكثر من 1,480 زبون يثقون في جودة طقم مثقاب 36VF MAX</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-white p-4.5 rounded-2xl border border-stone-200 shadow-xs">
+          <div class="flex items-center gap-1 text-amber-400 mb-2">
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+          </div>
+          <p class="text-xs text-stone-700 leading-relaxed">
+            "تبارك الله السلعة نقية ووصلاتني فـ 24 ساعة للدار البيضاء. جربت البيركيسيون فالحيط ديال الصالون داز بسهولة. والبطاريات شادين مزيان."
+          </p>
+          <div class="mt-3 pt-2 border-t border-stone-100 flex items-center justify-between text-[11px] text-stone-500">
+            <span class="font-bold text-stone-900">محمد البركاني - الدار البيضاء</span>
+            <span class="text-emerald-700 font-bold">✓ زبون مؤكد</span>
+          </div>
+        </div>
+
+        <div class="bg-white p-4.5 rounded-2xl border border-stone-200 shadow-xs">
+          <div class="flex items-center gap-1 text-amber-400 mb-2">
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+          </div>
+          <p class="text-xs text-stone-700 leading-relaxed">
+            "خديت العرض ديال 2 حقائب ليا وللصديق ديالي، وفرنا 50 درهم وسلعة ناضية. الموزع تيق حتى حليت الصندوق وجربتو عاد خلصت."
+          </p>
+          <div class="mt-3 pt-2 border-t border-stone-100 flex items-center justify-between text-[11px] text-stone-500">
+            <span class="font-bold text-stone-900">رشيد قاديري - الرباط</span>
+            <span class="text-emerald-700 font-bold">✓ زبون مؤكد</span>
+          </div>
+        </div>
+
+        <div class="bg-white p-4.5 rounded-2xl border border-stone-200 shadow-xs">
+          <div class="flex items-center gap-1 text-amber-400 mb-2">
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+          </div>
+          <p class="text-xs text-stone-700 leading-relaxed">
+            "الصراحة ثمن 300 درهم مع التوصيل المجاني لا يقاوم. الحقيبة فيها كلشي كتحتاجو للتركيب فالدار وبلا خيوط مبرزطة."
+          </p>
+          <div class="mt-3 pt-2 border-t border-stone-100 flex items-center justify-between text-[11px] text-stone-500">
+            <span class="font-bold text-stone-900">يوسف مرزوق - مراكش</span>
+            <span class="text-emerald-700 font-bold">✓ زبون مؤكد</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="my-10 max-w-2xl mx-auto">
+      <div class="text-center mb-6">
+        <h2 class="text-xl font-black text-stone-900">الأسئلة الأكثر تكراراً</h2>
+      </div>
+
+      <div class="space-y-3">
+        <details class="bg-white rounded-2xl p-4 border border-stone-200 cursor-pointer shadow-xs">
+          <summary class="font-bold text-sm text-stone-900 list-none flex items-center justify-between">
+            <span>كيف تتم عملية الدفع والتسليم؟</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-stone-400"></i>
+          </summary>
+          <p class="text-xs text-stone-600 mt-2.5 leading-relaxed">
+            الدفع نقداً 100% عند الاستلام (Paiement à la livraison). لا تدفع أي شيء حتى يصلك الموزع إلى عنوانك، تفتح الحقيبة وتتفقد كل الأجزاء وتجرب الجهاز بنفسك.
+          </p>
+        </details>
+
+        <details class="bg-white rounded-2xl p-4 border border-stone-200 cursor-pointer shadow-xs">
+          <summary class="font-bold text-sm text-stone-900 list-none flex items-center justify-between">
+            <span>كم يستغرق التوصيل؟</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-stone-400"></i>
+          </summary>
+          <p class="text-xs text-stone-600 mt-2.5 leading-relaxed">
+            التوصيل سريع جداً، يستغرق ما بين 24 إلى 48 ساعة فقط لجميع مدن وقرى المملكة المغربية. والتوصيل مجاني 0 درهم.
+          </p>
+        </details>
+
+        <details class="bg-white rounded-2xl p-4 border border-stone-200 cursor-pointer shadow-xs">
+          <summary class="font-bold text-sm text-stone-900 list-none flex items-center justify-between">
+            <span>ما هو الضمان المتوفر مع المنتج؟</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-stone-400"></i>
+          </summary>
+          <p class="text-xs text-stone-600 mt-2.5 leading-relaxed">
+            المنتج مشمول بضمان لمدة سنة كاملة مع خدمة الاستبدال الفوري في حالة أي عيب مصنعي. كما أن خدمة ما بعد البيع متوفرة دائماً عبر الهاتف والواتساب.
+          </p>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-stone-900 text-stone-400 text-xs py-10 border-t border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-start">
+      <div>
+        <div class="flex items-center justify-center md:justify-start gap-2 text-white font-bold text-base mb-1">
+          <i data-lucide="wrench" class="w-5 h-5 text-sky-400"></i>
+          <span>متجر الأدوات المغربية • 36VF MAX</span>
+        </div>
+        <p class="text-stone-400 text-xs max-w-md">
+          المتجر المغربي المتخصص في معدات الحفر والفك الاحترافية مع خدمة التوصيل المجاني والدفع بعد المعاينة.
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center md:items-end gap-1.5">
+        <span class="text-stone-300 font-bold">خدمة الزبناء والطلبات الهاتفية:</span>
+        <a href="https://wa.me/212617641774" target="_blank" class="text-emerald-400 hover:text-emerald-300 font-mono font-bold text-sm flex items-center gap-1">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>06 17 64 17 74</span>
+        </a>
+        <span class="text-[11px] text-stone-500">متاح طيلة أيام الأسبوع من 9:00 إلى 21:00</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <div class="fixed bottom-20 sm:bottom-6 left-5 z-40">
+    <a href="https://wa.me/212617641774" target="_blank" class="w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-200 hover:scale-110 active:scale-95 border-2 border-white/60">
+      <i data-lucide="message-circle" class="w-7 h-7"></i>
+    </a>
+  </div>
+
+  <!-- Mobile Sticky Bottom Bar -->
+  <div class="sm:hidden fixed bottom-0 left-0 right-0 z-30 bg-white/95 backdrop-blur-md border-t border-stone-200 p-3 shadow-lg flex items-center justify-between gap-3">
+    <div>
+      <span class="text-[10px] text-stone-500 block">السعر الإجمالي:</span>
+      <span id="mobileStickyPrice" class="text-base font-black text-emerald-700">300 DH</span>
+    </div>
+    <div class="flex items-center gap-2 flex-1 justify-end">
+      <button onclick="scrollToOrder()" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-black py-2.5 px-4 rounded-xl shadow-md transition flex items-center gap-1.5">
+        <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+        <span>اطلب الآن</span>
+      </button>
+      <a href="https://wa.me/212617641774" target="_blank" class="bg-stone-900 text-emerald-400 p-2.5 rounded-xl border border-stone-700">
+        <i data-lucide="message-circle" class="w-4 h-4"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Orders Manager Modal / Drawer -->
+  <div id="ordersDrawer" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex justify-end">
+    <div class="bg-white w-full max-w-md h-full flex flex-col shadow-2xl">
+      <div class="p-4 bg-stone-900 text-white flex items-center justify-between border-b border-stone-800">
+        <div class="flex items-center gap-2">
+          <i data-lucide="shopping-bag" class="w-5 h-5 text-emerald-400"></i>
+          <div>
+            <h3 class="font-extrabold text-sm sm:text-base">سجل طلبيات الزبناء</h3>
+            <span id="drawerOrdersCountText" class="text-[11px] text-stone-400">0 طلبيات مسجلة</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="clearAllOrders()" class="text-stone-400 hover:text-rose-400 p-1.5 rounded-lg text-xs" title="مسح الكل">
+            <i data-lucide="trash-2" class="w-4 h-4"></i>
+          </button>
+          <button onclick="toggleOrdersDrawer()" class="text-stone-400 hover:text-white p-1.5 rounded-lg">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+      <div id="ordersListContainer" class="flex-1 overflow-y-auto p-4 space-y-3 bg-stone-50">
+        <!-- populated by JS -->
+      </div>
+      <div class="p-3 bg-stone-100 border-t border-stone-200 text-center text-xs text-stone-500">
+        ✓ يتم حفظ جميع الطلبيات تلقائياً في ذاكرة المتصفح
+      </div>
+    </div>
+  </div>
+
+  <!-- Logic & Scripts (Zero Dependencies) -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // State
+    let currentPackage = { pieces: 1, price: 300, discount: 0, title: 'حقيبة واحدة' };
+    const WHATSAPP_NUMBER = '212617641774';
+
+    // Package Selection
+    function selectPackage(pieces, price, discount, title) {
+      currentPackage = { pieces, price, discount, title };
+
+      // Update Radio Buttons
+      [1, 2, 3].forEach(id => {
+        const card = document.getElementById('pkg-card-' + id);
+        const radio = document.getElementById('radio-pkg-' + id);
+        if (id === pieces) {
+          card.classList.add('border-emerald-600', 'bg-emerald-50/40');
+          card.classList.remove('border-stone-200');
+          radio.checked = true;
+        } else {
+          card.classList.remove('border-emerald-600', 'bg-emerald-50/40');
+          card.classList.add('border-stone-200');
+          radio.checked = false;
+        }
+      });
+
+      // Update Price Displays
+      document.getElementById('heroPriceDisplay').textContent = price;
+      document.getElementById('badgePrice').textContent = price + ' DH';
+      document.getElementById('btnCtaText').textContent = `اطلب الآن | الدفع عند الاستلام (${price} DH)`;
+      document.getElementById('formSummaryPrice').textContent = price + ' DH';
+      document.getElementById('formSubmitTotal').textContent = `${price} DH (توصيل مجاني 0 DH)`;
+      document.getElementById('mobileStickyPrice').textContent = price + ' DH';
+
+      updateWhatsAppLinks();
+    }
+
+    function getWhatsAppMessage(name = '', phone = '', address = '', city = '') {
+      return `السلام عليكم ورحمة الله، أريد طلب عرض:
+📦 المنتج: مثقاب ومفك لاسلكي 36VF MAX (الحقيبة المتكاملة)
+🔢 الكمية: ${currentPackage.pieces} حقائب (${currentPackage.title})
+💰 السعر الإجمالي: ${currentPackage.price} درهم مغربي
+🚚 طريقة الدفع: الدفع عند الاستلام (COD) بعد المعاينة والتجريب
+👤 الاسم: ${name || 'مشتري مهتم'}
+📱 الهاتف: ${phone || 'المرفق بالواتساب'}
+🏙️ المدينة: ${city || document.getElementById('customerCity')?.value || 'المغرب'}
+📍 العنوان: ${address || 'سأحدده معكم عبر الهاتف'}`;
+    }
+
+    function updateWhatsAppLinks() {
+      const msg = encodeURIComponent(getWhatsAppMessage());
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+      document.getElementById('btnDirectWhatsAppHero').href = url;
+      document.getElementById('btnFormDirectWhatsApp').href = url;
+    }
+
+    function scrollToOrder() {
+      const el = document.getElementById('order-form-section');
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function fillTestDemo() {
+      document.getElementById('customerName').value = 'محمد العلوي';
+      document.getElementById('customerPhone').value = '0661234567';
+      document.getElementById('customerCity').value = 'الدار البيضاء (Casablanca)';
+      document.getElementById('customerAddress').value = 'شارع الزرقطوني، عمارة 15';
+      document.getElementById('customerNotes').value = 'الاتصال بعد العصر';
+      clearErrors();
+    }
+
+    function clearErrors() {
+      document.getElementById('nameError').classList.add('hidden');
+      document.getElementById('phoneError').classList.add('hidden');
+      document.getElementById('addressError').classList.add('hidden');
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      clearErrors();
+
+      const name = document.getElementById('customerName').value.trim();
+      const phone = document.getElementById('customerPhone').value.trim();
+      const city = document.getElementById('customerCity').value;
+      const address = document.getElementById('customerAddress').value.trim();
+      const notes = document.getElementById('customerNotes').value.trim();
+
+      let hasError = false;
+      if (!name) {
+        document.getElementById('nameError').classList.remove('hidden');
+        hasError = true;
+      }
+      const cleanPhone = phone.replace(/[^0-9]/g, '');
+      if (!cleanPhone || cleanPhone.length < 8) {
+        document.getElementById('phoneError').classList.remove('hidden');
+        hasError = true;
+      }
+      if (!address) {
+        document.getElementById('addressError').classList.remove('hidden');
+        hasError = true;
+      }
+
+      if (hasError) return;
+
+      const orderId = 'MAR-' + Math.floor(100000 + Math.random() * 900000);
+      const newOrder = {
+        orderId,
+        customerName: name,
+        phone,
+        city,
+        address,
+        notes,
+        pieces: currentPackage.pieces,
+        totalPriceDH: currentPackage.price,
+        createdAt: new Date().toLocaleDateString('ar-MA') + ' ' + new Date().toLocaleTimeString('ar-MA', { hour: '2-digit', minute: '2-digit' })
+      };
+
+      // Save to localStorage
+      try {
+        const stored = JSON.parse(localStorage.getItem('drill_customer_orders') || '[]');
+        stored.unshift(newOrder);
+        localStorage.setItem('drill_customer_orders', JSON.stringify(stored));
+      } catch (err) {
+        console.error(err);
+      }
+
+      // Show alert
+      document.getElementById('orderSuccessMessage').textContent = `شكراً ${name}، تم تسجيل طلبيتك رقم #${orderId}. سنتصل بك على ${phone} لتأكيد التوصيل إلى ${city}. المبلغ عند الاستلام: ${currentPackage.price} DH.`;
+      const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(getWhatsAppMessage(name, phone, address, city))}`;
+      document.getElementById('orderSuccessWhatsAppLink').href = waLink;
+      document.getElementById('orderSuccessAlert').classList.remove('hidden');
+
+      // Scroll to alert
+      document.getElementById('orderSuccessAlert').scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      renderOrders();
+    }
+
+    // Orders Manager
+    function renderOrders() {
+      const stored = JSON.parse(localStorage.getItem('drill_customer_orders') || '[]');
+      const badge = document.getElementById('ordersCountBadge');
+      const drawerCount = document.getElementById('drawerOrdersCountText');
+      const container = document.getElementById('ordersListContainer');
+
+      badge.textContent = stored.length;
+      drawerCount.textContent = `${stored.length} طلبيات مسجلة`;
+
+      if (stored.length === 0) {
+        container.innerHTML = `
+          <div class="h-full flex flex-col items-center justify-center text-center p-6 text-stone-400">
+            <i data-lucide="package" class="w-10 h-10 mb-2 text-stone-300"></i>
+            <p class="font-bold text-sm text-stone-600">لا توجد أي طلبية مسجلة حالياً</p>
+            <p class="text-xs text-stone-400 mt-1">عند تأكيد أي زبون للطلب ستظهر بياناته هنا فوراً.</p>
+          </div>
+        `;
+      } else {
+        container.innerHTML = stored.map(o => `
+          <div class="bg-white rounded-2xl p-3 border border-stone-200 shadow-xs space-y-1.5 text-xs">
+            <div class="flex items-center justify-between border-b border-stone-100 pb-1.5">
+              <span class="font-black text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md">#${o.orderId}</span>
+              <span class="text-[10px] text-stone-400">${o.createdAt}</span>
+            </div>
+            <div class="font-bold text-stone-900 text-sm">${o.customerName}</div>
+            <div class="text-emerald-700 font-mono font-bold">${o.phone}</div>
+            <div class="text-stone-600">${o.city} - ${o.address}</div>
+            ${o.notes ? `<div class="text-[11px] text-stone-500 bg-stone-50 p-1 rounded">ملاحظة: ${o.notes}</div>` : ''}
+            <div class="pt-2 border-t border-stone-100 flex items-center justify-between">
+              <span class="font-black text-stone-950 text-sm">${o.totalPriceDH} DH (${o.pieces} حقائب)</span>
+              <div class="flex items-center gap-1.5">
+                <a href="tel:${o.phone}" class="bg-stone-100 text-stone-800 font-bold px-2 py-1 rounded">اتصال</a>
+                <a href="https://wa.me/${o.phone.replace(/[^0-9]/g,'') || WHATSAPP_NUMBER}" target="_blank" class="bg-emerald-600 text-white font-bold px-2 py-1 rounded">واتساب</a>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+      lucide.createIcons();
+    }
+
+    function toggleOrdersDrawer() {
+      const drawer = document.getElementById('ordersDrawer');
+      drawer.classList.toggle('hidden');
+      renderOrders();
+    }
+
+    function clearAllOrders() {
+      if (confirm('هل أنت متأكد من مسح جميع الطلبيات المسجلة؟')) {
+        localStorage.removeItem('drill_customer_orders');
+        renderOrders();
+      }
+    }
+
+    // Countdown Timer
+    let timeLeft = { h: 5, m: 42, s: 18 };
+    setInterval(() => {
+      if (timeLeft.s > 0) timeLeft.s--;
+      else if (timeLeft.m > 0) { timeLeft.m--; timeLeft.s = 59; }
+      else if (timeLeft.h > 0) { timeLeft.h--; timeLeft.m = 59; timeLeft.s = 59; }
+      document.getElementById('timerHours').textContent = String(timeLeft.h).padStart(2, '0');
+      document.getElementById('timerMinutes').textContent = String(timeLeft.m).padStart(2, '0');
+      document.getElementById('timerSeconds').textContent = String(timeLeft.s).padStart(2, '0');
+    }, 1000);
+
+    // Initial render
+    renderOrders();
+  </script>
+</body>
+</html>
